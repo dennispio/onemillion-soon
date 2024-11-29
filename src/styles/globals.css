@@ -1,0 +1,77 @@
+@tailwind base;
+
+h1 {
+  @apply text-2xl;
+}
+h2 {
+  @apply text-xl;
+}
+h3 {
+  @apply text-lg;
+}
+a {
+  @apply text-blue-600;
+}
+
+body {
+  background:#181516;
+}
+
+.slider-wrapper {
+  color: #aaa;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  height: 58px;
+  padding-left: 15px;
+  overflow: hidden; /* One of the importing things for slide effect */
+}
+
+.slider div {
+  height: 50px;
+  padding: 2px 15px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+}
+
+.slider-text-1 {
+  animation: slide 10s linear infinite;
+}
+
+
+@keyframes slide {
+  0% {
+    margin-top: -300px;
+  }
+  5% {
+    /* For stopping effect */
+    margin-top: -200px;
+  }
+  33% {
+    margin-top: -200px;
+  }
+  38% {
+    /* For stopping effect */
+    margin-top: -100px;
+  }
+  66% {
+    margin-top: -100px;
+  }
+  71% {
+    /* For stopping effect */
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
+
+@tailwind components;
+@tailwind utilities;
