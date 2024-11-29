@@ -21,13 +21,13 @@ const IndexPage = () => (
       <div class="slider-wrapper">
         <div class="slider">
           <div class="slider-text-1 text-xl">
-          Enough is Enough
+          Enough is Enough.
           </div>
           <div class="slider-text-2 text-xl">
           Everyone feels the dark impacts of Social Media.
           </div>
           <div class="slider-text-3 text-xl">
-          Together we demand change.
+          Together, we demand change.
           </div>
         </div>
         </div>
@@ -36,20 +36,20 @@ const IndexPage = () => (
       <div className="flex justify-center items-center mt-8">
       <a
       href="mailto:example@example.com"
-      className="inline-block px-6 py-3 text-white border border-white bg-[#181516] rounded-xl hover:bg-white hover:text-black transition duration-300"
+      className="inline-block px-6 py-3 text-black border border-white bg-white rounded-xl hover:bg-[#181516] hover:text-white transition duration-300"
       >
       Get in Contact
     </a>
       </div>
-    <div className="flex justify-center items-center mt-4">
-      <a>
+    <div className="flex justify-center items-center mt-4 gap-2">
+      <a href="">
     <StaticImage
         src="../images/linkedin.png"
         width={48}
         alt=""
       />
       </a>
-      <a>
+      <a href="">
         <StaticImage
         src="../images/instagram.png"
         width={48}
