@@ -49,6 +49,13 @@ const IndexPage = () => (
             alt="linkedin"
           />
       </a>
+      <a href="https://www.youtube.com/@1CHANGE-EU">
+        <StaticImage
+        src="../images/youtube.png"
+        width={48}
+        alt="youtube"
+      />
+      </a>
       <a href="https://www.instagram.com/1change.eu/">
         <StaticImage
         src="../images/instagram.png"
@@ -56,7 +63,7 @@ const IndexPage = () => (
         alt="instagram"
       />
       </a>
-      <a href="">
+      <a href="https://www.facebook.com/people/1changeeu-Digital-Ethics/61570096241108/">
         <StaticImage
         src="../images/facebook.png"
         width={48}
@@ -68,13 +75,6 @@ const IndexPage = () => (
         src="../images/tik-tok.png"
         width={48}
         alt="tik-tok"
-      />
-      </a>
-      <a href="https://www.youtube.com/@1CHANGE-EU">
-        <StaticImage
-        src="../images/youtube.png"
-        width={48}
-        alt="youtube"
       />
       </a>
     </div>
