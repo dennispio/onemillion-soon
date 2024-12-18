@@ -42,18 +42,39 @@ const IndexPage = () => (
     </a>
       </div>
     <div className="flex justify-center items-center mt-4 gap-2">
-      <a href="">
-    <StaticImage
-        src="../images/linkedin.png"
+      <a href="https://www.linkedin.com/company/1change/">
+        <StaticImage
+            src="../images/linkedin.png"
+            width={48}
+            alt="linkedin"
+          />
+      </a>
+      <a href="https://www.instagram.com/1change.eu/">
+        <StaticImage
+        src="../images/instagram.png"
         width={48}
-        alt=""
+        alt="instagram"
       />
       </a>
       <a href="">
         <StaticImage
-        src="../images/instagram.png"
+        src="../images/facebook.png"
         width={48}
-        alt=""
+        alt="facebook"
+      />
+      </a>
+      <a href="https://www.tiktok.com/@1change.eu">
+        <StaticImage
+        src="../images/tik-tok.png"
+        width={48}
+        alt="tik-tok"
+      />
+      </a>
+      <a href="https://www.youtube.com/@1CHANGE-EU">
+        <StaticImage
+        src="../images/youtube.png"
+        width={48}
+        alt="youtube"
       />
       </a>
     </div>
