@@ -55,6 +55,7 @@ const IndexPage = () => (
         width={48}
         alt="youtube"
       />
+      </a>
       <a href="https://x.com/1changeeu">
         <StaticImage
         src="../images/x.png"
