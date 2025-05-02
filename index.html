@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-black text-white font-sans">
+
+  <div class="flex mt-32 flex-col">
+    <div class="flex items-center justify-center">
+      <img src="images/logo.jpg" width="500" alt="" />
+    </div>
+
+    <h1 class="text-6xl text-center font-bold uppercase animate-pulse mt-12 mb-12">
+      Coming Soon
+    </h1>
+
+    <div class="slider-container">
+        <!-- Maske / Wrapper für die Slides -->
+        <div class="slides-wrapper">
+            <!-- Die einzelnen Slides -->
+            <div class="slide">
+                <h1>Enough is Enough.</h1>
+            </div>
+            <div class="slide">
+                <p>Everybody feels the DARK IMPACTS of social media.</p>
+            </div>
+            <div class="slide is-accent">
+                <span class="slide-intro">Together, we demand</span>
+                <h1 class="slide-punchline">CHANGE!</h1>
+            </div>
+        </div>
+    </div>
+
+     <!-- Initial Prompt / Hero Section -->
+  <div class="mt-12">
+    <div id="initial-prompt" class="initial-prompt visible">
+       <div class="hero-content">
+           <h1>Discover Your Digital Day</h1>
+           <p class="subtitle">How many hours of screen time shape your day?</p>
+           <div class="slider-container initial-slider">
+               <input type="range" id="initialScreenTime" min="0" max="16" step="0.5" value="4">
+               <span class="slider-value initial-value"><span id="initialValue">4.0</span> hours</span>
+               <div class="instruction">Adjust the slider & release to see the impact</div>
+           </div>
+       </div>
+   </div>
+   </div>
+
+    <div class="flex justify-center items-center mt-8">
+      <a
+        href="mailto:example@example.com"
+        class="contact-button"
+      >
+        Get in Contact
+      </a>
+    </div>
+
+    <div class="flex justify-center items-center mt-12 gap-2 social-icons">
+      <a href="https://www.linkedin.com/company/1change/">
+        <img src="images/linkedin.png" width="48" alt="linkedin" />
+      </a>
+      <a href="https://www.youtube.com/@1CHANGE-EU">
+        <img src="images/youtube.png" width="48" alt="youtube" />
+      </a>
+      <a href="https://x.com/1changeeu">
+        <img src="images/x.png" width="48" alt="x" />
+      </a>
+      <a href="https://www.instagram.com/1change.eu/">
+        <img src="images/instagram.png" width="48" alt="instagram" />
+      </a>
+      <a href="https://www.facebook.com/people/1changeeu-Digital-Ethics/61570096241108/">
+        <img src="images/facebook.png" width="48" alt="facebook" />
+      </a>
+      <a href="https://www.tiktok.com/@1change.eu">
+        <img src="images/tik-tok.png" width="48" alt="tik-tok" />
+      </a>
+    </div>
+
+<!-- Main Experience (2 Columns) -->
+<div id="main-experience" class="mt-12 main-experience">
+    <!-- Column 1: Daily View -->
+    <div class="column daily-view-column">
+        <h2>Your 24-Hour Day</h2>
+        <div class="chart-container">
+            <canvas id="dailyChart"></canvas>
+            <div id="chart-center-text" class="chart-center-text"></div>
+        </div>
+        <div class="controls-area">
+            <div class="slider-group">
+                 <!-- Sliders Section -->
+                 <div class="slider-container" data-category="screen"><label for="screenTime" class="slider-label"><svg class="label-icon" viewBox="0 0 256 256"><path d="M168,24H88A32.09,32.09,0,0,0,56,56V200a32.09,32.09,0,0,0,32,32h80a32.09,32.09,0,0,0,32-32V56A32.09,32.09,0,0,0,168,24Zm16,176a16,16,0,0,1-16,16H88a16,16,0,0,1-16-16V56a16,16,0,0,1,16-16h80a16,16,0,0,1,16,16Z"></path></svg>Screen Time</label><input type="range" id="screenTime" min="0" max="16" step="0.1" value="4"><span class="slider-value-display"><span id="screenTimeValue">4.0</span> h</span></div>
+                 <div class="slider-container" data-category="sleep"><label for="sleepTime" class="slider-label"><svg class="label-icon" viewBox="0 0 256 256"><path d="M208.38,178.7a8,8,0,0,0,6.06-5.16,83.94,83.94,0,0,0-123.8-108.89,8,8,0,0,0-3.7-9.84,84.07,84.07,0,0,1-15.86-106A8,8,0,0,0,64.83,41a100,100,0,0,0,96.24,148.32,8,8,0,0,0,7.94-5.08,83.66,83.66,0,0,0,34.2-4.88,8,8,0,0,0,5.17-10.66Zm-46.45-30.15a99.75,99.75,0,0,0-86.66-49.71,8,8,0,0,0-9.8,6.41,68,68,0,0,1,99.25,87.58,8,8,0,0,0,9.8-6.41A67.79,67.79,0,0,1,161.93,148.55Z"></path></svg>Sleep / Recovery</label><input type="range" id="sleepTime" min="0" max="16" step="0.1" value="8"><span class="slider-value-display"><span id="sleepTimeValue">8.0</span> h</span></div>
+                 <div class="slider-container" data-category="work"><label for="workTime" class="slider-label"><svg class="label-icon" viewBox="0 0 256 256"><path d="M216,64H176V56a24,24,0,0,0-24-24H104A24,24,0,0,0,80,56v8H40A16,16,0,0,0,24,80V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V80A16,16,0,0,0,216,64ZM96,56a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm128,144a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V80a8,8,0,0,1,8-8H80v8a8,8,0,0,0,16,0V72h64v8a8,8,0,0,0,16,0V72h40a8,8,0,0,1,8,8Z"></path></svg>Work / School</label><input type="range" id="workTime" min="0" max="16" step="0.1" value="8"><span class="slider-value-display"><span id="workTimeValue">8.0</span> h</span></div>
+                 <div class="slider-container" data-category="social"><label for="socialTime" class="slider-label"><svg class="label-icon" viewBox="0 0 256 256"><path d="M104,120a32,32,0,1,1,32-32A32,32,0,0,1,104,120Zm98.91,97.18a115.3,115.3,0,0,0-19.79-27.16,75.88,75.88,0,0,0-106.24,0A115.3,115.3,0,0,0,57.09,217.18a8,8,0,1,0,12.2,10.33,99.6,99.6,0,0,1,117.42,0,8,8,0,1,0,12.2-10.33ZM236,136a8,8,0,0,0-8,8,100.11,100.11,0,0,1-191.91,5.91,8,8,0,1,0-15.9-1.83A116,116,0,0,0,128,232a115.43,115.43,0,0,0,59.68-15.85,76.11,76.11,0,0,0,40.23-26.67A100.5,100.5,0,0,1,244,144,8,8,0,0,0,236,136Z"></path></svg>Social / Free Time</label><input type="range" id="socialTime" min="0" max="16" step="0.1" value="4"><span class="slider-value-display"><span id="socialTimeValue">4.0</span> h</span></div>
+             </div>
+             <div id="warnings-container" class="warnings-container"></div>
+        </div>
+    </div>
+
+    <!-- Column 2: Lifetime Impact -->
+    <div class="column impact-column">
+         <h2>Your Lifetime</h2>
+         <p>How your screen time adds up over the years...</p>
+         <div class="impact-display">
+             <div class="impact-card"><span class="impact-number" id="daysPerYear">0</span><span class="impact-label">Days per Year</span><span class="impact-sublabel">spent looking at screens</span></div>
+             <div class="impact-card"><span class="impact-number" id="yearsInLife">0.0</span><span class="impact-label">Years of Your Life</span><span class="impact-sublabel">lost to screens (out of 80 years)</span></div>
+         </div>
+         <div class="lifetime-grid-container">
+                <h3>A Lifetime Visualized (80 Years) <span id="lifetime-grid-text" class="dynamic-grid-text"></span></h3>
+                <div id="lifetime-grid" class="lifetime-grid"></div>
+                <div class="lifetime-legend"><span class="dot-legend lost"></span> Lost Years <span class="dot-legend available"></span> Remaining Years</div>
+         </div>
+         <p class="reflection">
+             One day, you might wish these hours<br>were spent on <span class="highlight">moments that truly matter</span>,<br>not just content forgotten moments later.
+         </p>
+    </div>
+</div>
+
+  </div>
+      <!-- Libraries -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+  
+      <!-- Your Script -->
+      <script src="script.js"></script>
+
+</body>
+</html>
